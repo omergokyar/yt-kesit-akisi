@@ -1,0 +1,18 @@
+# Python ortami
+.venv/
+__pycache__/
+
+# Videolar, ciktilar ve modeller depoya girmez
+calisma/
+teslim/
+modeller/
+*.mp4
+*.mkv
+*.mov
+*.wav
+
+# Kisisel Claude Code ayarlari
+.claude/settings.local.json
+
+# Kolaj ayri projeye tasiniyor
+scripts/kolaj_*.py
