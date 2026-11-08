@@ -72,7 +72,7 @@ def main() -> None:
     d = Path(sys.argv[1])
     v = json.loads((d / "kesitler.json").read_text(encoding="utf-8"))
     kod = v["kod"]
-    teslim = d.parent.parent / "teslim" / kod
+    teslim = Path(__file__).parent.parent / "teslim" / kod
     for alt in ("uzun", "shorts"):
         if (teslim / alt).exists():
             shutil.rmtree(teslim / alt)  # yalnizca teslim baglantilari; asil dosyalar calisma/ altinda

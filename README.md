@@ -1,6 +1,6 @@
 # YT Kesit Akışı
 
-Farsça dublajlı dizi bölümlerinden 8–12 dakikalık uzun kesitler ve dikey Shorts üretir; ekip için iki dilli Excel listesi ve Drive'a hazır klasör çıkarır.
+Farsça dublajlı dizi bölümlerinden (dizi bağımsız) 8–12 dakikalık uzun kesitler ve dikey Shorts üretir; ekip için iki dilli Excel listesi ve Drive'a hazır klasör çıkarır.
 
 ## Gereksinimler
 Windows, NVIDIA ekran kartı, git, [Claude Code](https://claude.com/claude-code). uv ve ffmpeg yoksa kurulum betiği kurar.
@@ -16,8 +16,9 @@ cd yt-kesit-akisi
 ## Kullanım
 Klasörde `claude` komutuyla Claude Code'u açın ve yazın:
 ```
-/bolum-isle "\\NAS\diziler\bolum-197.mp4" 197
+/bolum-isle "\\NAS\diziler\bolum-197.mp4" YC 197
 ```
+Argümanlar: video yolu, dizi kodu, bölüm numarası.
 Akış: döküm ve sahne tespiti → kesit seçimi → **sizin onayınız** → video üretimi → teslim klasörü.
 
 Takılırsanız Claude'a "bu proje nasıl kullanılır?" diye sorun; kurallar `CLAUDE.md` içinde.
@@ -28,4 +29,4 @@ Takılırsanız Claude'a "bu proje nasıl kullanılır?" diye sorun; kurallar `C
 ## Notlar
 - Videolar, çıktılar ve modeller depoya girmez.
 - Kullanılan aralıkların kaydı `calisma/kesit_kaydi.csv` dosyasındadır ve bilgisayara özeldir. Birden çok bilgisayar kullanıyorsanız bu dosyayı Drive'da yedekleyin.
-- Karakter yazımları için `diziler/YC.md` dosyasını güncel tutun; yeni dizi için aynı biçimde dosya ekleyin.
+- Her dizinin kodu ve karakterleri `diziler/<KOD>.md` dosyasındadır. Yeni dizide komut kodu ve karakterleri sorar; elle eklemek için `diziler/_sablon.md` kopyalanır.

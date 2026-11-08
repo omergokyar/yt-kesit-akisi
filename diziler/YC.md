@@ -2,6 +2,8 @@
 
 Döküm adları yanlış yazabilir; Farsça metinlerde sağdaki yazımı kullan. Yazımlar ekip tarafından henüz doğrulanmadı.
 
+**Ana karakterler:** Ferit, Seyran
+
 | Karakter | Farsça | Dökümde görülen | Not |
 |---|---|---|---|
 | Ferit | فرید | | Erkek ana karakter |

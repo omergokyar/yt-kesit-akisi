@@ -20,7 +20,8 @@ def mmss(t: float) -> str:
 
 def main() -> None:
     d = Path(sys.argv[1])
-    kayit = d.parent / "kesit_kaydi.csv"
+    kayit = Path(__file__).parent.parent / "calisma" / "kesit_kaydi.csv"  # tum diziler icin tek kayit
+    kayit.parent.mkdir(exist_ok=True)
     v = json.loads((d / "kesitler.json").read_text(encoding="utf-8"))
     eski = {}
     if kayit.exists():
